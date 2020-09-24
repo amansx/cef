@@ -13,10 +13,8 @@ package cef
 
 import "unsafe"
 
-import (
-	// #include "capi_gen.h"
-	"C"
-)
+// #include "capi_gen.h"
+import "C"
 
 // AddCrossOriginWhitelistEntry (cef_add_cross_origin_whitelist_entry from include/capi/cef_origin_whitelist_capi.h)
 // Add an entry to the cross-origin access whitelist.
