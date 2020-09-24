@@ -9,24 +9,24 @@
 
 package cmd
 
-import (
-	"fmt"
-	"os"
+//import (
+//	"fmt"
+//	"os"
 // 	"path"
-	"flag"
+//	"flag"
 // 	"runtime"
 // 	"github.com/richardwilkes/toolbox"
 // 	"github.com/richardwilkes/toolbox/atexit"
-)
+//)
 
 var (
 	installPrefix = "/usr/local/cef"
-	cefPlatform   string = 
+	cefPlatform   string = "windows64"
 )
 
 func checkPlatform() {
-	flag.StringVar(&cefPlatform, "platform", "linux64", "macosx64, linux64 or windows64")
-	flag.Parse()
+	//flag.StringVar(&cefPlatform, "platform", "linux64", "macosx64, linux64 or windows64")
+	//flag.Parse()
 
 // 	switch runtime.GOOS {
 // 	case toolbox.MacOS:
