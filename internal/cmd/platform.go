@@ -12,11 +12,11 @@ package cmd
 import (
 	"fmt"
 	"os"
-	"path"
+// 	"path"
 	"flag"
-	"runtime"
-	"github.com/richardwilkes/toolbox"
-	"github.com/richardwilkes/toolbox/atexit"
+// 	"runtime"
+// 	"github.com/richardwilkes/toolbox"
+// 	"github.com/richardwilkes/toolbox/atexit"
 )
 
 var (
@@ -26,22 +26,22 @@ var (
 
 func checkPlatform() {
 	flag.StringVar(&cefPlatform, "platform", , "macosx64, linux64 or windows64")
-	switch runtime.GOOS {
-	case toolbox.MacOS:
-		cefPlatform = "macosx64"
-	case toolbox.LinuxOS:
-		cefPlatform = "linux64"
-	case toolbox.WindowsOS:
-		if os.Getenv("MSYSTEM") != "MINGW64" {
-			fmt.Println("Windows is only supported through the use of MINGW64")
-			atexit.Exit(1)
-		}
-		cefPlatform = "windows64"
-		installPrefix = path.Join(path.Dir(os.Getenv("MINGW_PREFIX")), installPrefix)
-	default:
-		fmt.Println("Unsupported OS: ", runtime.GOOS)
-		atexit.Exit(1)
-	}
+// 	switch runtime.GOOS {
+// 	case toolbox.MacOS:
+// 		cefPlatform = "macosx64"
+// 	case toolbox.LinuxOS:
+// 		cefPlatform = "linux64"
+// 	case toolbox.WindowsOS:
+// 		if os.Getenv("MSYSTEM") != "MINGW64" {
+// 			fmt.Println("Windows is only supported through the use of MINGW64")
+// 			atexit.Exit(1)
+// 		}
+// 		cefPlatform = "windows64"
+// 		installPrefix = path.Join(path.Dir(os.Getenv("MINGW_PREFIX")), installPrefix)
+// 	default:
+// 		fmt.Println("Unsupported OS: ", runtime.GOOS)
+// 		atexit.Exit(1)
+// 	}
 	fmt.Println("Downloading for: ", cefPlatform)
 	fmt.Println("MINGW_PREFIX: ", os.Getenv("MINGW_PREFIX"))
 }
