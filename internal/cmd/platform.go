@@ -14,7 +14,6 @@ import (
 	"os"
 	"path"
 	"runtime"
-	"flag"
 	"github.com/richardwilkes/toolbox"
 	"github.com/richardwilkes/toolbox/atexit"
 )
