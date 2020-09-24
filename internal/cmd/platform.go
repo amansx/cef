@@ -26,6 +26,8 @@ var (
 
 func checkPlatform() {
 	flag.StringVar(&cefPlatform, "platform", "linux64", "macosx64, linux64 or windows64")
+	flag.Parse()
+
 // 	switch runtime.GOOS {
 // 	case toolbox.MacOS:
 // 		cefPlatform = "macosx64"
