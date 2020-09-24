@@ -93,7 +93,7 @@ int main(int argc, char **argv) {
 }
 `), 0644), "write", name)
 		c.untar(bytes.NewBuffer(c.downloadAndUncompressArchive()))
-		if runtime.GOOS == toolbox.WindowsOS {
+		if true {
 			dir := path.Join(path.Dir(os.Getenv("MINGW_PREFIX")), "lib/pkgconfig")
 			createDir(dir, 0755) //nolint:gocritic
 			name = path.Join(dir, "cef.pc")
