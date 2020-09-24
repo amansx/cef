@@ -13,6 +13,7 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"flag"
 	"runtime"
 	"github.com/richardwilkes/toolbox"
 	"github.com/richardwilkes/toolbox/atexit"
@@ -24,6 +25,7 @@ var (
 )
 
 func checkPlatform() {
+	flag.StringVar(&cefPlatform, "platform", , "macosx64, linux64 or windows64")
 	switch runtime.GOOS {
 	case toolbox.MacOS:
 		cefPlatform = "macosx64"
@@ -41,4 +43,5 @@ func checkPlatform() {
 		atexit.Exit(1)
 	}
 	fmt.Println("Downloading for: ", cefPlatform)
+	fmt.Println("MINGW_PREFIX: ", os.Getenv("MINGW_PREFIX"))
 }
