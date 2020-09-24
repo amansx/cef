@@ -9,15 +9,15 @@
 
 package cmd
 
-//import (
-//	"fmt"
+import (
+	"fmt"
 //	"os"
 // 	"path"
 //	"flag"
 // 	"runtime"
 // 	"github.com/richardwilkes/toolbox"
 // 	"github.com/richardwilkes/toolbox/atexit"
-//)
+)
 
 var (
 	installPrefix = "/usr/local/cef"
@@ -44,6 +44,6 @@ func checkPlatform() {
 // 		fmt.Println("Unsupported OS: ", runtime.GOOS)
 // 		atexit.Exit(1)
 // 	}
-// 	fmt.Println("Downloading for: ", cefPlatform)
-// 	fmt.Println("MINGW_PREFIX: ", os.Getenv("MINGW_PREFIX"))
+	fmt.Println("Downloading for: ", cefPlatform)
+	fmt.Println("MINGW_PREFIX: ", os.Getenv("MINGW_PREFIX"))
 }
