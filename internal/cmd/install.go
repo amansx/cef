@@ -21,11 +21,11 @@ import (
 	"os"
 	"path"
 	"regexp"
-	"runtime"
+	//"runtime"
 	"strings"
 	"time"
 
-	"github.com/richardwilkes/toolbox"
+	//"github.com/richardwilkes/toolbox"
 	"github.com/richardwilkes/toolbox/atexit"
 	"github.com/richardwilkes/toolbox/cmdline"
 	"github.com/richardwilkes/toolbox/xio"
