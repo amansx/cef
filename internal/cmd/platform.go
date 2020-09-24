@@ -14,7 +14,7 @@ import (
 	"os"
 	"path"
 	"runtime"
-
+	"flag"
 	"github.com/richardwilkes/toolbox"
 	"github.com/richardwilkes/toolbox/atexit"
 )
@@ -41,4 +41,5 @@ func checkPlatform() {
 		fmt.Println("Unsupported OS: ", runtime.GOOS)
 		atexit.Exit(1)
 	}
+	fmt.Println("Downloading for: ", cefPlatform)
 }
